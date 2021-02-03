@@ -3,6 +3,7 @@
 
 <h1>Eat-Da-Burger</h1>
 
+{{!-- Left contains burgers yet to be devoured --}}
 <div class="left-column">
     <ul>
         {{#each burgers}}
@@ -13,6 +14,7 @@
     </ul>
 </div>
 
+{{!-- Right contains devoured burgers --}}
 <div class="right-column">
     <ul>
         {{#each burgers}}
@@ -25,3 +27,14 @@
 
 <br><br>
 
+{{!-- Form for input --}}
+<form class="addBurger">
+
+    <div class="form-group">
+        <label for="burgInput"></label>
+        <input type="text" id="burgInput" name="burger_name">
+    </div>
+
+    <button type="submit">submit</button>
+
+</form>
