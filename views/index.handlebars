@@ -12,3 +12,16 @@
         {{/each}}
     </ul>
 </div>
+
+<div class="right-column">
+    <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burgers/burger-block devoured=false}}
+        {{/if}}
+        {{/each}}
+    </ul>
+</div>
+
+<br><br>
+
