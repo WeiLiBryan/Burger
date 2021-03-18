@@ -24,4 +24,23 @@ $(function () {
             }
         );
     });
+
+    $(".create-burger").on("submit", function(event) {
+        event.preventDefault();
+
+        var newBurger = {
+            name: $("#ca").val().trim(),
+            eaten: $("[name=eaten]:checked").val().trim()
+        };
+
+        $.ajax("/api/burgers", {
+            type: "POST",
+            data: newBurger
+        }).then(
+            function() {
+                console.log("New Burger");
+                location.reload();
+            }
+        );
+    });
 });
